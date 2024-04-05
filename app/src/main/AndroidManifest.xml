@@ -13,6 +13,16 @@
         android:theme="@style/Theme.FirstAndroidProjectTasha"
         tools:targetApi="31">
         <activity
+            android:name=".BackgroundActivity"
+            android:exported="false"
+            android:label="@string/title_activity_background"
+            android:theme="@style/Theme.FirstAndroidProjectTasha" />
+        <activity
+            android:name=".BoxActivity"
+            android:exported="false"
+            android:label="@string/title_activity_box"
+            android:theme="@style/Theme.FirstAndroidProjectTasha" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false"
             android:label="@string/title_activity_login"

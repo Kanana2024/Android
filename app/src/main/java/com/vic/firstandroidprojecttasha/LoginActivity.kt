@@ -1,5 +1,6 @@
 package com.vic.firstandroidprojecttasha
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -46,7 +47,29 @@ class LoginActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                LoginScreen("User")
+               Column {
+                   LoginScreen("User")
+                   Spacer(modifier = Modifier.height(20.dp))
+                   Button(onClick = {},
+                       modifier = Modifier
+                           .fillMaxWidth()
+                           .padding(10.dp))
+                   {
+                       Text(text = "Login here")
+                   }
+                   Spacer(modifier = Modifier.height(10.dp))
+                   Button(onClick = {
+                                    val intent = Intent(this@LoginActivity,MainActivity::class.java)
+                       startActivity(intent)
+
+                   },
+                       modifier = Modifier
+                           .fillMaxWidth()
+                           .padding(10.dp))
+                   {
+                       Text(text = "Register here")
+                   }
+               }
                 }
             }
         }
@@ -78,22 +101,8 @@ fun LoginScreen(name:String){
         TextFieldEmailComponent()
         Spacer(modifier = Modifier.height(20.dp))
         TextFieldPasswordComponent()
-        Spacer(modifier = Modifier.height(20.dp))
-        Button(onClick = {},
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(10.dp))
-        {
-            Text(text = "Login here")
-        }
-        Spacer(modifier = Modifier.height(10.dp))
-        Button(onClick = {},
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(10.dp))
-        {
-            Text(text = "Register here")
-        }
+
+
     }
 
 }

@@ -81,6 +81,18 @@ class MainActivity : ComponentActivity() {
                     {
                         Text(text = "Register here")
                     }
+                    Spacer(modifier = Modifier.height(10.dp))
+                    Button(onClick = {
+                                     intent = Intent(this@MainActivity,BackgroundActivity::class.java)
+                                    startActivity(intent)
+                    },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(10.dp),
+                        colors = ButtonDefaults.buttonColors(Color.Black))
+                    {
+                        Text(text = "Background image")
+                    }
                 }
             }
 
